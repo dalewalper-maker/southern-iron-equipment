@@ -2,12 +2,12 @@ name: Meta auto-post (FB Page + Instagram)
 
 on:
   schedule:
-    # 9 AM, 12 PM, 3 PM, 5 PM Mountain time (MDT = UTC-6, May–Nov)
     - cron: '0 15,18,21,23 * * 1-5'
   workflow_dispatch:
   push:
     paths:
       - '.trigger-post'
+      - 'post_to_meta.py'
 
 permissions:
   contents: write
@@ -26,17 +26,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Post next queued unit to FB Page + Instagram
+      - name: Mark run started
+        run: |
+          mkdir -p .runs
+          echo "Started $(date -u +%FT%TZ) trigger=${{ github.event_name }}" > .runs/last-run.txt
+      - name: Post to FB Page + IG
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID:    ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID:    ${{ secrets.IG_USER_ID }}
           IG_ENABLED:    "1"
         run: |
+          set +e
           python post_to_meta.py 2>&1 | tee post_log.txt
-          echo "EXIT_CODE=$?"
-      - name: Commit log + queue (always)
-        if: always()
-        run: |
-          git config user.name "Southern Iron Bot"
-  
+          rc=${PIPESTATUS[0]}
+          ec
