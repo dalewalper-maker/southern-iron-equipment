@@ -1,26 +1,42 @@
-"""Post one queued unit to Facebook Page AND Instagram Business via Graph API.
-Runs as a GitHub Action on a schedule. Reads social_queue.json, posts the next
-unposted unit to BOTH channels, marks each state independently, commits the queue back.
-
-Env required:
-  FB_PAGE_TOKEN  — never-expiring Page access token (has IG perms after token regen)
-  FB_PAGE_ID     — Lift Boss JCB Lethbridge Page ID (908888912301091)
-  PUBLIC_BASE    — site base URL for photo URLs (default southernironequipment.ca)
-  IG_USER_ID     — optional override; otherwise auto-fetched from Page
-"""
+"""Post one queued unit to FB Page + IG Business. Debug-instrumented build."""
 import json, os, sys, datetime, time
 import urllib.request, urllib.parse, urllib.error
+import traceback
 
-PAGE_TOKEN = os.environ["FB_PAGE_TOKEN"]
-PAGE_ID = os.environ["FB_PAGE_ID"]
+LOG_PATH = "post_log.txt"
+def log(msg):
+    line = f"[{datetime.datetime.utcnow().isoformat()}Z] {msg}"
+    print(line, flush=True)
+    with open(LOG_PATH, "a") as f:
+        f.write(line + "\n")
+
+# Truncate log at start of each run
+open(LOG_PATH, "w").close()
+
+log("=== post_to_meta.py START ===")
+log(f"Python: {sys.version}")
+
+PAGE_TOKEN = os.environ.get("FB_PAGE_TOKEN", "")
+PAGE_ID = os.environ.get("FB_PAGE_ID", "")
 PUBLIC_BASE = os.environ.get("PUBLIC_BASE", "https://southernironequipment.ca")
 IG_USER_ID_OVERRIDE = os.environ.get("IG_USER_ID")
-# Set IG_ENABLED=1 once Meta App Review approves instagram_content_publish.
-# Until then we skip IG entirely (Meta gates this permission behind review).
-IG_ENABLED = os.environ.get("IG_ENABLED", "0") == "1"
+IG_ENABLED_RAW = os.environ.get("IG_ENABLED", "0")
+IG_ENABLED = IG_ENABLED_RAW.strip() == "1"
+
+log(f"FB_PAGE_TOKEN length: {len(PAGE_TOKEN)} (first 8: {PAGE_TOKEN[:8] if PAGE_TOKEN else 'EMPTY'})")
+log(f"FB_PAGE_ID: '{PAGE_ID}'")
+log(f"IG_ENABLED raw: '{IG_ENABLED_RAW}' -> bool: {IG_ENABLED}")
+log(f"PUBLIC_BASE: {PUBLIC_BASE}")
+
+if not PAGE_TOKEN:
+    log("FATAL: FB_PAGE_TOKEN env var is empty or missing")
+    sys.exit(2)
+if not PAGE_ID:
+    log("FATAL: FB_PAGE_ID env var is empty or missing")
+    sys.exit(2)
+
 QUEUE = "social_queue.json"
 API = "https://graph.facebook.com/v25.0"
-
 
 def http(method, url, fields):
     data = urllib.parse.urlencode(fields).encode("utf-8") if fields else None
@@ -33,147 +49,104 @@ def http(method, url, fields):
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "replace")
-        raise RuntimeError(f"HTTP {e.code} from Graph: {body}") from e
+        raise RuntimeError(f"HTTP {e.code}: {body}") from e
 
-
-# ---------- Facebook Page ----------
 def fb_upload_photo(url):
-    """Upload unpublished photo by URL, returns media_fbid."""
     r = http("POST", f"{API}/{PAGE_ID}/photos",
              {"url": url, "published": "false", "access_token": PAGE_TOKEN})
     return r["id"]
 
-
 def fb_post_unit(u):
     photo_urls = [f"{PUBLIC_BASE}/{p}" for p in u.get("photos", [])[:5]]
-    print(f"[FB] Uploading {len(photo_urls)} photos...")
+    log(f"[FB] Uploading {len(photo_urls)} photos for {u['slug']}")
     media_ids = []
     for purl in photo_urls:
         try:
             mid = fb_upload_photo(purl)
             media_ids.append({"media_fbid": mid})
+            log(f"  [FB] photo uploaded: {mid}")
             time.sleep(0.5)
         except Exception as e:
-            print(f"  [FB] photo upload failed for {purl}: {e}")
+            log(f"  [FB] photo FAIL {purl}: {e}")
     payload = {"message": u["fb_message"], "access_token": PAGE_TOKEN}
     if media_ids:
         payload["attached_media"] = json.dumps(media_ids)
+    log(f"[FB] Publishing feed post with {len(media_ids)} photos...")
     r = http("POST", f"{API}/{PAGE_ID}/feed", payload)
     return r["id"]
 
-
-# ---------- Instagram Business ----------
 def ig_get_user_id():
-    """Fetch Instagram Business Account ID linked to this FB Page (one-time)."""
     if IG_USER_ID_OVERRIDE:
         return IG_USER_ID_OVERRIDE
     r = http("GET", f"{API}/{PAGE_ID}",
              {"fields": "instagram_business_account", "access_token": PAGE_TOKEN})
     iba = r.get("instagram_business_account")
     if not iba or not iba.get("id"):
-        raise RuntimeError("No Instagram Business Account linked to this Page. "
-                           "Check FB Page Settings → Linked Accounts → Instagram.")
+        raise RuntimeError("No IG Business Account linked to this Page")
     return iba["id"]
 
-
-def ig_create_child_container(ig_user_id, image_url):
-    """Create a child container for a carousel item. Returns creation_id."""
-    r = http("POST", f"{API}/{ig_user_id}/media", {
-        "image_url": image_url,
-        "is_carousel_item": "true",
-        "access_token": PAGE_TOKEN,
-    })
+def ig_child(ig_id, image_url):
+    r = http("POST", f"{API}/{ig_id}/media",
+             {"image_url": image_url, "is_carousel_item": "true", "access_token": PAGE_TOKEN})
     return r["id"]
 
-
-def ig_create_single_container(ig_user_id, image_url, caption):
-    """Single-image post container."""
-    r = http("POST", f"{API}/{ig_user_id}/media", {
-        "image_url": image_url,
-        "caption": caption,
-        "access_token": PAGE_TOKEN,
-    })
+def ig_single(ig_id, image_url, caption):
+    r = http("POST", f"{API}/{ig_id}/media",
+             {"image_url": image_url, "caption": caption, "access_token": PAGE_TOKEN})
     return r["id"]
 
-
-def ig_create_carousel_container(ig_user_id, child_ids, caption):
-    """Wrap child containers into a carousel container."""
-    r = http("POST", f"{API}/{ig_user_id}/media", {
-        "media_type": "CAROUSEL",
-        "children": ",".join(child_ids),
-        "caption": caption,
-        "access_token": PAGE_TOKEN,
-    })
+def ig_carousel(ig_id, child_ids, caption):
+    r = http("POST", f"{API}/{ig_id}/media",
+             {"media_type": "CAROUSEL", "children": ",".join(child_ids),
+              "caption": caption, "access_token": PAGE_TOKEN})
     return r["id"]
 
-
-def ig_wait_for_ready(creation_id, max_wait=60):
-    """Poll status_code until container is FINISHED (or ERROR)."""
-    for _ in range(max_wait):
+def ig_wait(creation_id, max_wait=60):
+    for i in range(max_wait):
         r = http("GET", f"{API}/{creation_id}",
                  {"fields": "status_code,status", "access_token": PAGE_TOKEN})
-        status = r.get("status_code")
-        if status == "FINISHED":
-            return True
-        if status == "ERROR":
-            raise RuntimeError(f"IG container processing error: {r.get('status')}")
+        s = r.get("status_code")
+        if s == "FINISHED": return True
+        if s == "ERROR": raise RuntimeError(f"IG processing error: {r.get('status')}")
         time.sleep(1)
     return False
 
-
-def ig_publish(ig_user_id, creation_id):
-    r = http("POST", f"{API}/{ig_user_id}/media_publish",
+def ig_publish(ig_id, creation_id):
+    r = http("POST", f"{API}/{ig_id}/media_publish",
              {"creation_id": creation_id, "access_token": PAGE_TOKEN})
     return r["id"]
 
-
 def ig_post_unit(u, caption):
-    """Post unit photos as IG carousel (or single image if only 1 photo)."""
-    ig_user_id = ig_get_user_id()
+    ig_id = ig_get_user_id()
+    log(f"[IG] User ID: {ig_id}")
     photo_urls = [f"{PUBLIC_BASE}/{p}" for p in u.get("photos", [])[:10]]
-    if not photo_urls:
-        raise RuntimeError("No photos for IG post")
-    print(f"[IG] Posting {len(photo_urls)} photo(s) to IG account {ig_user_id}...")
+    if not photo_urls: raise RuntimeError("No photos")
+    log(f"[IG] Posting {len(photo_urls)} photos")
     if len(photo_urls) == 1:
-        container_id = ig_create_single_container(ig_user_id, photo_urls[0], caption)
+        container = ig_single(ig_id, photo_urls[0], caption)
     else:
-        child_ids = []
+        children = []
         for purl in photo_urls:
             try:
-                cid = ig_create_child_container(ig_user_id, purl)
-                child_ids.append(cid)
+                children.append(ig_child(ig_id, purl))
                 time.sleep(0.5)
             except Exception as e:
-                print(f"  [IG] child container failed for {purl}: {e}")
-        if len(child_ids) < 2:
-            # Fallback to single image if not enough children succeeded
-            container_id = ig_create_single_container(ig_user_id, photo_urls[0], caption)
+                log(f"  [IG] child FAIL {purl}: {e}")
+        if len(children) < 2:
+            container = ig_single(ig_id, photo_urls[0], caption)
         else:
-            container_id = ig_create_carousel_container(ig_user_id, child_ids, caption)
-    print(f"[IG] Container {container_id} created. Waiting for processing...")
-    if not ig_wait_for_ready(container_id):
-        raise RuntimeError("IG container processing timed out")
-    media_id = ig_publish(ig_user_id, container_id)
+            container = ig_carousel(ig_id, children, caption)
+    log(f"[IG] Container {container} created, waiting...")
+    if not ig_wait(container): raise RuntimeError("IG processing timeout")
+    media_id = ig_publish(ig_id, container)
     return media_id
 
-
-# ---------- Queue orchestration ----------
-def ig_caption_from_fb(fb_message):
-    """IG-flavored caption: same body, but IG accepts up to 30 hashtags and prefers
-    them at the end. The FB message already includes hashtags + brand tags, so we
-    can reuse mostly as-is. Trim to 2200 char IG limit if needed."""
-    # IG hard cap is 2200 chars
-    if len(fb_message) <= 2200:
-        return fb_message
-    return fb_message[:2196] + "…"
-
-
 def main():
+    log("Loading queue file...")
     with open(QUEUE) as f:
         q = json.load(f)
+    log(f"Queue loaded: {len(q['units'])} units")
 
-    # Find next unit needing either FB or IG post.
-    # If IG_ENABLED=0, we only consider fb_posted state (skip IG entirely from queue logic).
     candidate = None
     for u in q["units"]:
         fb_done = u.get("fb_posted") in (True, "FAILED")
@@ -184,44 +157,58 @@ def main():
         break
 
     if not candidate:
-        print("Queue: nothing left to post on either channel.")
+        log("Queue: nothing left to post on either channel.")
         return
 
     u = candidate
-    print(f"Posting: {u['title']} ({u['slug']})")
-    print(f"  FB state: {u.get('fb_posted')}, IG state: {u.get('ig_posted')}")
+    log(f"CANDIDATE: {u['title']} ({u['slug']}) score={u.get('_priority_score')}")
+    log(f"  fb_posted={u.get('fb_posted')} ig_posted={u.get('ig_posted')}")
 
-    # ---- FB post (skip if already posted) ----
     if not u.get("fb_posted") or u.get("fb_posted") == "FAILED":
         try:
             post_id = fb_post_unit(u)
             u["fb_posted"] = True
             u["fb_posted_at"] = datetime.datetime.utcnow().isoformat() + "Z"
             u["fb_post_id"] = post_id
-            print(f"  ✅ FB posted: {post_id}")
-            print(f"  View: https://www.facebook.com/{post_id}")
+            log(f"  ✅ FB posted: {post_id}")
+            log(f"  View: https://www.facebook.com/{post_id}")
         except Exception as e:
-            print(f"  ❌ FB post failed: {e}")
+            log(f"  ❌ FB FAIL: {e}")
+            log(f"  Traceback: {traceback.format_exc()}")
             u.setdefault("fb_fail_count", 0)
             u["fb_fail_count"] += 1
-            u["fb_last_error"] = str(e)
+            u["fb_last_error"] = str(e)[:500]
             if u["fb_fail_count"] >= 3:
                 u["fb_posted"] = "FAILED"
 
-    # ---- IG post (gated by IG_ENABLED flag; Meta App Review required for perms) ----
-    if not IG_ENABLED:
-        print("  [IG] Skipped — IG_ENABLED=0. Set after Meta App Review for instagram_content_publish.")
-    elif not u.get("ig_posted") or u.get("ig_posted") == "FAILED":
+    if IG_ENABLED and (not u.get("ig_posted") or u.get("ig_posted") == "FAILED"):
         try:
-            ig_caption = ig_caption_from_fb(u["fb_message"])
-            ig_media_id = ig_post_unit(u, ig_caption)
+            caption = u["fb_message"][:2200]
+            media_id = ig_post_unit(u, caption)
             u["ig_posted"] = True
             u["ig_posted_at"] = datetime.datetime.utcnow().isoformat() + "Z"
-            u["ig_post_id"] = ig_media_id
-            print(f"  ✅ IG posted: {ig_media_id}")
+            u["ig_post_id"] = media_id
+            log(f"  ✅ IG posted: {media_id}")
         except Exception as e:
-            print(f"  ❌ IG post failed: {e}")
+            log(f"  ❌ IG FAIL: {e}")
+            log(f"  Traceback: {traceback.format_exc()}")
             u.setdefault("ig_fail_count", 0)
             u["ig_fail_count"] += 1
-            u["ig_last_error"] = str(e)
-       
+            u["ig_last_error"] = str(e)[:500]
+            if u["ig_fail_count"] >= 3:
+                u["ig_posted"] = "FAILED"
+    elif not IG_ENABLED:
+        log("[IG] Skipped — IG_ENABLED=0")
+
+    log("Writing queue back...")
+    with open(QUEUE, "w") as f:
+        json.dump(q, f, indent=2)
+    log("=== post_to_meta.py END ===")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        log(f"FATAL in main(): {e}")
+        log(traceback.format_exc())
+        sys.exit(3)
