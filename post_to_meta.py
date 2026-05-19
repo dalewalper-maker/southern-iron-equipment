@@ -15,6 +15,9 @@ PAGE_TOKEN = os.environ["FB_PAGE_TOKEN"]
 PAGE_ID = os.environ["FB_PAGE_ID"]
 PUBLIC_BASE = os.environ.get("PUBLIC_BASE", "https://southernironequipment.ca")
 IG_USER_ID_OVERRIDE = os.environ.get("IG_USER_ID")
+# Set IG_ENABLED=1 once Meta App Review approves instagram_content_publish.
+# Until then we skip IG entirely (Meta gates this permission behind review).
+IG_ENABLED = os.environ.get("IG_ENABLED", "0") == "1"
 QUEUE = "social_queue.json"
 API = "https://graph.facebook.com/v25.0"
 
@@ -169,14 +172,16 @@ def main():
     with open(QUEUE) as f:
         q = json.load(f)
 
-    # Find next unit needing either FB or IG post
+    # Find next unit needing either FB or IG post.
+    # If IG_ENABLED=0, we only consider fb_posted state (skip IG entirely from queue logic).
     candidate = None
     for u in q["units"]:
-        if not u.get("fb_posted") or not u.get("ig_posted"):
-            if u.get("fb_posted") == "FAILED" and u.get("ig_posted") == "FAILED":
-                continue
-            candidate = u
-            break
+        fb_done = u.get("fb_posted") in (True, "FAILED")
+        ig_done = (not IG_ENABLED) or u.get("ig_posted") in (True, "FAILED")
+        if fb_done and ig_done:
+            continue
+        candidate = u
+        break
 
     if not candidate:
         print("Queue: nothing left to post on either channel.")
@@ -203,9 +208,10 @@ def main():
             if u["fb_fail_count"] >= 3:
                 u["fb_posted"] = "FAILED"
 
-    # ---- IG post (skip if already posted; skip if FB failed -- post both or neither
-    #      this run, but allow IG retry next run if it failed alone) ----
-    if not u.get("ig_posted") or u.get("ig_posted") == "FAILED":
+    # ---- IG post (gated by IG_ENABLED flag; Meta App Review required for perms) ----
+    if not IG_ENABLED:
+        print("  [IG] Skipped — IG_ENABLED=0. Set after Meta App Review for instagram_content_publish.")
+    elif not u.get("ig_posted") or u.get("ig_posted") == "FAILED":
         try:
             ig_caption = ig_caption_from_fb(u["fb_message"])
             ig_media_id = ig_post_unit(u, ig_caption)
@@ -218,16 +224,4 @@ def main():
             u.setdefault("ig_fail_count", 0)
             u["ig_fail_count"] += 1
             u["ig_last_error"] = str(e)
-            if u["ig_fail_count"] >= 3:
-                u["ig_posted"] = "FAILED"
-
-    with open(QUEUE, "w") as f:
-        json.dump(q, f, indent=2)
-
-    # Exit non-zero if BOTH failed so GH Actions surfaces a red check
-    if u.get("fb_posted") not in (True, "FAILED") and u.get("ig_posted") not in (True, "FAILED"):
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
+       
