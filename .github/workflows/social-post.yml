@@ -15,28 +15,27 @@ permissions:
 jobs:
   post:
     runs-on: ubuntu-latest
-    concurrency:
-      group: meta-post-${{ github.ref }}
-      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Mark run started
+      - name: Test commit-back
         run: |
-          mkdir -p .runs
-          echo "Started $(date -u) trigger=${{ github.event_name }} sha=${{ github.sha }}" > .runs/last-run.txt
+          echo "Workflow ran at $(date -u) via ${{ github.event_name }}" > workflow-ran.txt
+          git config user.name "Southern Iron Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add workflow-ran.txt
+          git commit -m "test: workflow ran [skip ci]"
+          git push
       - name: Post to FB + IG
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ENABLED: "1"
-        continue-on-error: true
-        run: python post_to_meta.py > post_log.txt 2>&1
-      - name: Append debug info to log
-        if: always()
-        ru
+        run: |
+          set +e
+          python post_to_meta.py > post_log.tx
