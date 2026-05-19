@@ -22,22 +22,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Mark run started
         run: |
           mkdir -p .runs
-          echo "Started $(date -u +%FT%TZ) trigger=${{ github.event_name }}" > .runs/last-run.txt
-      - name: Post to FB Page + IG
+          echo "Started $(date -u) trigger=${{ github.event_name }} sha=${{ github.sha }}" > .runs/last-run.txt
+      - name: Post to FB + IG
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-          FB_PAGE_ID:    ${{ secrets.FB_PAGE_ID }}
-          IG_USER_ID:    ${{ secrets.IG_USER_ID }}
-          IG_ENABLED:    "1"
-        run: |
-          set +e
-          python post_to_meta.py 2>&1 | tee post_log.txt
-          rc=${PIPESTATUS[0]}
-          ec
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ENABLED: "1"
+        continue-on-error: true
+        run: python post_to_meta.py > post_log.txt 2>&1
+      - name: Append debug info to log
+        if: always()
+        ru
