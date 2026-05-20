@@ -1,0 +1,12 @@
+.git
+.github
+.runs
+*.py
+*.bat
+*.log
+post_log.txt
+social_queue.json
+wrangler.jsonc
+.gitignore
+.assetsignore
+.trigger-post
