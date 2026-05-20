@@ -18,10 +18,16 @@ GOLD_LT = (245, 184, 66)
 TEXT = (238, 238, 240)
 GRAY = (156, 156, 164)
 
-FONT_DIR = "/usr/share/fonts/truetype/google-fonts"
 def F(size, weight="Bold"):
-    p = f"{FONT_DIR}/Poppins-{weight}.ttf"
-    return ImageFont.truetype(p if os.path.exists(p) else f"{FONT_DIR}/Poppins-Bold.ttf", size)
+    # Look for bundled repo fonts first (GitHub runners lack system Poppins),
+    # then system fonts, then PIL default.
+    for d in (os.path.join(SITE, "assets", "fonts"),
+              "/usr/share/fonts/truetype/google-fonts"):
+        for w in (weight, "Bold"):
+            p = os.path.join(d, f"Poppins-{w}.ttf")
+            if os.path.exists(p):
+                return ImageFont.truetype(p, size)
+    return ImageFont.load_default()
 
 SITE = os.path.dirname(os.path.abspath(__file__))
 REELS_DIR = os.path.join(SITE, "assets", "reels")
