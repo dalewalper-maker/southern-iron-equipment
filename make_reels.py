@@ -114,12 +114,13 @@ def intro_png(unit, out):
 
 def photo_png(unit, photo_path, out):
     img, d = base()
-    fit_into(img, photo_path, (40, 84, W - 80, 1430))
-    cy = 1582
-    d.rectangle([W // 2 - 56, cy, W // 2 + 56, cy + 5], fill=GOLD); cy += 34
+    # photo upper area; title + price block sits in lower-middle (clear of edge)
+    fit_into(img, photo_path, (40, 210, W - 80, 1120))
+    cy = 1400
+    d.rectangle([W // 2 - 56, cy, W // 2 + 56, cy + 5], fill=GOLD); cy += 36
     cat = unit.get("category_label", "")
-    cy = ctext(d, W // 2, cy, f"{unit['title']} {cat}".strip(), F(48, "Bold"), TEXT) + 16
-    ctext(d, W // 2, cy, unit.get("price_display", "Contact for pricing"), F(58, "Bold"), GOLD)
+    cy = ctext(d, W // 2, cy, f"{unit['title']} {cat}".strip(), F(50, "Bold"), TEXT) + 18
+    ctext(d, W // 2, cy, unit.get("price_display", "Contact for pricing"), F(64, "Bold"), GOLD)
     img.save(out)
 
 
@@ -127,11 +128,11 @@ def endcard_png(out):
     img, d = base()
     src = _endcard_src()
     if src:
-        fit_into(img, src, (24, 150, W - 48, 980))
-    cy = 1300
-    d.rectangle([W // 2 - 80, cy, W // 2 + 80, cy + 6], fill=GOLD); cy += 56
+        fit_into(img, src, (24, 170, W - 48, 830))
+    cy = 1090
+    d.rectangle([W // 2 - 80, cy, W // 2 + 80, cy + 6], fill=GOLD); cy += 54
     cy = ctext(d, W // 2, cy, "CALL OR TEXT DALE", F(46, "Bold"), TEXT, spacing=3) + 26
-    cy = ctext(d, W // 2, cy, PHONE, F(104, "Bold"), GOLD) + 40
+    cy = ctext(d, W // 2, cy, PHONE, F(104, "Bold"), GOLD) + 42
     ctext(d, W // 2, cy, ADDR, F(32, "Regular"), GRAY)
     img.save(out)
 
@@ -173,7 +174,7 @@ def build_reel(slug, by_slug, fast=False):
             prev = lbl
         out = os.path.join(REELS_DIR, f"{slug}.mp4")
         preset = "ultrafast" if fast else "medium"
-        crf = "26" if fast else "21"
+        crf = "26" if fast else "23"
         cmd = ["ffmpeg", "-y", "-loglevel", "error"] + inputs + [
             "-filter_complex", ";".join(fc), "-map", "[vout]",
             "-c:v", "libx264", "-preset", preset, "-crf", crf,

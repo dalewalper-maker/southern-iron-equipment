@@ -1,0 +1,34 @@
+name: Build reels (batch render all units)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Ensure ffmpeg
+        run: ffmpeg -version >/dev/null 2>&1 || sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Install Pillow
+        run: pip install --quiet Pillow
+      - name: Render all reels
+        run: python make_reels.py --all
+      - name: Commit rendered reels
+        run: |
+          git config user.name "Southern Iron Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/reels 2>/dev/null || true
+          git diff --staged --quiet && echo "no new reels" || git commit -m "build: render reels [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break || sleep $i
+          done
