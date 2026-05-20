@@ -2,7 +2,8 @@ name: Meta auto-post (FB Page + Instagram)
 
 on:
   schedule:
-    - cron: '0 15,18,21,23 * * 1-5'
+    # 9 AM and 3 PM Mountain time (MDT = UTC-6), weekdays
+    - cron: '0 15,21 * * 1-5'
   workflow_dispatch:
 
 permissions:

@@ -13,9 +13,9 @@
         "assets/img/units/jcb-542-70ag-lbjcb507/04.jpg",
         "assets/img/units/jcb-542-70ag-lbjcb507/05.jpg"
       ],
-      "fb_posted": true,
-      "fb_posted_at": "2026-05-20T16:15:50.412202Z",
-      "fb_post_id": "908888912301091_122145584991132983",
+      "fb_posted": false,
+      "fb_posted_at": null,
+      "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
       "_priority_score": 5,
@@ -23,10 +23,7 @@
         "top-seller",
         "large-jcb"
       ],
-      "_excel_location": "Edmonton",
-      "ig_posted": true,
-      "ig_posted_at": "2026-05-20T16:16:22.810927Z",
-      "ig_post_id": "17918002230166420"
+      "_excel_location": "Edmonton"
     },
     {
       "slug": "jcb-3cx15hfca-lbjcb574",
