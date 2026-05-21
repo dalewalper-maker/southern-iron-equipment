@@ -1,0 +1,16 @@
+[2026-05-21T08:48:26.896472Z] === post_to_meta.py START ===
+[2026-05-21T08:48:26.896547Z] Python: 3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]
+[2026-05-21T08:48:26.896598Z] FB_PAGE_TOKEN length: 209 (first 8: EAAMWy2k)
+[2026-05-21T08:48:26.896626Z] FB_PAGE_ID: '908888912301091'
+[2026-05-21T08:48:26.896653Z] IG_ENABLED raw: '1' -> bool: True
+[2026-05-21T08:48:26.896703Z] PUBLIC_BASE: https://cdn.jsdelivr.net/gh/dalewalper-maker/southern-iron-equipment@main
+[2026-05-21T08:48:26.896752Z] Loading queue file...
+[2026-05-21T08:48:26.897981Z] Queue loaded: 86 units
+[2026-05-21T08:48:26.898035Z] CANDIDATE: 2022 JCB 542-70AG (jcb-542-70ag-lbjcb507) score=5
+[2026-05-21T08:48:26.898088Z]   fb_posted=True ig_posted=None
+[2026-05-21T08:48:27.629906Z] [IG] User ID: 17841444489318518
+[2026-05-21T08:48:27.630001Z] [IG] Posting 5 photos
+[2026-05-21T08:48:57.874735Z] [IG] Container 18107913278482978 created, waiting...
+[2026-05-21T08:49:03.788910Z]   ✅ IG posted: 18089192720366763
+[2026-05-21T08:49:03.789021Z] Writing queue back...
+[2026-05-21T08:49:03.791083Z] === post_to_meta.py END ===
