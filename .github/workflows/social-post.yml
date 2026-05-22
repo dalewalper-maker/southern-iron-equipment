@@ -25,6 +25,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_ENABLED: "1"
           PUBLIC_BASE: "https://cdn.jsdelivr.net/gh/dalewalper-maker/southern-iron-equipment@main"
+          REELS_ENABLED: "1"
         continue-on-error: true
         run: python post_to_meta.py
       - name: Commit log + queue
