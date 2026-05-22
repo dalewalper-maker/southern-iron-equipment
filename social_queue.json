@@ -165,9 +165,9 @@
         "assets/img/units/tailift-pfg25-ps-lbt1416/03.jpg",
         "assets/img/units/tailift-pfg25-ps-lbt1416/04.jpg"
       ],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
+      "fb_posted": true,
+      "fb_posted_at": "2026-05-22T20:56:08.386763Z",
+      "fb_post_id": "1538948591272864",
       "fb_fail_count": 0,
       "fb_last_error": null,
       "_priority_score": 3,
@@ -175,7 +175,10 @@
         "best-seller",
         "lethbridge-yard"
       ],
-      "_excel_location": "Lethbridge"
+      "_excel_location": "Lethbridge",
+      "ig_posted": true,
+      "ig_posted_at": "2026-05-22T20:56:49.076031Z",
+      "ig_post_id": "18071476637672889"
     },
     {
       "slug": "ausa-c251hx4-lba1350",

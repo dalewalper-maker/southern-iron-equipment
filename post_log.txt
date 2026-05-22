@@ -1,0 +1,21 @@
+[2026-05-22T20:55:55.943060Z] === post_to_meta.py START ===
+[2026-05-22T20:55:55.943126Z] Python: 3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]
+[2026-05-22T20:55:55.943179Z] FB_PAGE_TOKEN length: 209 (first 8: EAAMWy2k)
+[2026-05-22T20:55:55.943202Z] FB_PAGE_ID: '908888912301091'
+[2026-05-22T20:55:55.943225Z] IG_ENABLED raw: '1' -> bool: True
+[2026-05-22T20:55:55.943244Z] PUBLIC_BASE: https://cdn.jsdelivr.net/gh/dalewalper-maker/southern-iron-equipment@main
+[2026-05-22T20:55:55.943263Z] REELS_ENABLED: True
+[2026-05-22T20:55:55.943289Z] Loading queue file...
+[2026-05-22T20:55:55.944416Z] Queue loaded: 86 units
+[2026-05-22T20:55:55.944490Z] Skipped 5 photoless unit(s): jcb-3ts-8t-lbjcb596, jcb-3cx14-lbjcb531, jcb-3ts-8t-lbjcb56, jcb-3ts-8t-lbjcb559, jcb-3ts-8t-lbjcb593
+[2026-05-22T20:55:55.944517Z] CANDIDATE: 2025 Tailift PFG25-PS (tailift-pfg25-ps-lbt1416) score=3
+[2026-05-22T20:55:55.944547Z]   fb_posted=False ig_posted=None
+[2026-05-22T20:55:55.944591Z]   REELS_ENABLED=True, reel_exists=True -> use_reel=True
+[2026-05-22T20:55:55.944637Z] [FB] Posting reel video: https://cdn.jsdelivr.net/gh/dalewalper-maker/southern-iron-equipment@main/assets/reels/tailift-pfg25-ps-lbt1416.mp4
+[2026-05-22T20:56:08.386775Z]   ✅ FB posted: 1538948591272864
+[2026-05-22T20:56:08.386877Z]   View: https://www.facebook.com/1538948591272864
+[2026-05-22T20:56:08.917843Z] [IG] Creating Reel container: https://cdn.jsdelivr.net/gh/dalewalper-maker/southern-iron-equipment@main/assets/reels/tailift-pfg25-ps-lbt1416.mp4
+[2026-05-22T20:56:09.945524Z] [IG] Reel container 18108110447482978 created — waiting for processing...
+[2026-05-22T20:56:49.076042Z]   ✅ IG posted: 18071476637672889
+[2026-05-22T20:56:49.076134Z] Writing queue back...
+[2026-05-22T20:56:49.077983Z] === post_to_meta.py END ===
