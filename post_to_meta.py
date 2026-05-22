@@ -22,11 +22,17 @@ PUBLIC_BASE = os.environ.get("PUBLIC_BASE", "https://southernironequipment.ca")
 IG_USER_ID_OVERRIDE = os.environ.get("IG_USER_ID")
 IG_ENABLED_RAW = os.environ.get("IG_ENABLED", "0")
 IG_ENABLED = IG_ENABLED_RAW.strip() == "1"
+# Reels: when "1", posts the unit's rendered video reel (FB Page video + IG Reel)
+# instead of a photo carousel. Default OFF so a deploy never changes behaviour
+# until we explicitly flip it on after a test run. Falls back to photo carousel
+# for any unit that has no rendered reel.
+REELS_ENABLED = os.environ.get("REELS_ENABLED", "0").strip() == "1"
 
 log(f"FB_PAGE_TOKEN length: {len(PAGE_TOKEN)} (first 8: {PAGE_TOKEN[:8] if PAGE_TOKEN else 'EMPTY'})")
 log(f"FB_PAGE_ID: '{PAGE_ID}'")
 log(f"IG_ENABLED raw: '{IG_ENABLED_RAW}' -> bool: {IG_ENABLED}")
 log(f"PUBLIC_BASE: {PUBLIC_BASE}")
+log(f"REELS_ENABLED: {REELS_ENABLED}")
 
 if not PAGE_TOKEN:
     log("FATAL: FB_PAGE_TOKEN env var is empty or missing")
@@ -101,14 +107,14 @@ def ig_carousel(ig_id, child_ids, caption):
               "caption": caption, "access_token": PAGE_TOKEN})
     return r["id"]
 
-def ig_wait(creation_id, max_wait=60):
+def ig_wait(creation_id, max_wait=60, interval=1):
     for i in range(max_wait):
         r = http("GET", f"{API}/{creation_id}",
                  {"fields": "status_code,status", "access_token": PAGE_TOKEN})
         s = r.get("status_code")
         if s == "FINISHED": return True
         if s == "ERROR": raise RuntimeError(f"IG processing error: {r.get('status')}")
-        time.sleep(1)
+        time.sleep(interval)
     return False
 
 def ig_publish(ig_id, creation_id):
@@ -141,6 +147,38 @@ def ig_post_unit(u, caption):
     media_id = ig_publish(ig_id, container)
     return media_id
 
+# ---- Reels: post the unit's rendered video instead of a photo carousel ----
+def reel_rel(slug):
+    return f"assets/reels/{slug}.mp4"
+
+def has_reel(slug):
+    return os.path.exists(reel_rel(slug))
+
+def fb_post_reel(u):
+    """Post the unit's rendered reel as a Facebook Page video."""
+    url = f"{PUBLIC_BASE}/{reel_rel(u['slug'])}"
+    log(f"[FB] Posting reel video: {url}")
+    r = http("POST", f"{API}/{PAGE_ID}/videos",
+             {"file_url": url, "description": u["fb_message"],
+              "access_token": PAGE_TOKEN})
+    return r["id"]
+
+def ig_post_reel(u, caption):
+    """Post the unit's rendered reel as an Instagram Reel."""
+    ig_id = ig_get_user_id()
+    url = f"{PUBLIC_BASE}/{reel_rel(u['slug'])}"
+    log(f"[IG] Creating Reel container: {url}")
+    r = http("POST", f"{API}/{ig_id}/media",
+             {"media_type": "REELS", "video_url": url, "caption": caption,
+              "access_token": PAGE_TOKEN})
+    container = r["id"]
+    log(f"[IG] Reel container {container} created — waiting for processing...")
+    # Reels transcode takes longer than photos — poll up to ~10 min
+    if not ig_wait(container, max_wait=120, interval=5):
+        raise RuntimeError("IG Reel processing timed out")
+    media_id = ig_publish(ig_id, container)
+    return media_id
+
 def main():
     log("Loading queue file...")
     with open(QUEUE) as f:
@@ -164,9 +202,12 @@ def main():
     log(f"CANDIDATE: {u['title']} ({u['slug']}) score={u.get('_priority_score')}")
     log(f"  fb_posted={u.get('fb_posted')} ig_posted={u.get('ig_posted')}")
 
+    use_reel = REELS_ENABLED and has_reel(u["slug"])
+    log(f"  REELS_ENABLED={REELS_ENABLED}, reel_exists={has_reel(u['slug'])} -> use_reel={use_reel}")
+
     if not u.get("fb_posted") or u.get("fb_posted") == "FAILED":
         try:
-            post_id = fb_post_unit(u)
+            post_id = fb_post_reel(u) if use_reel else fb_post_unit(u)
             u["fb_posted"] = True
             u["fb_posted_at"] = datetime.datetime.utcnow().isoformat() + "Z"
             u["fb_post_id"] = post_id
@@ -184,7 +225,7 @@ def main():
     if IG_ENABLED and (not u.get("ig_posted") or u.get("ig_posted") == "FAILED"):
         try:
             caption = u["fb_message"][:2200]
-            media_id = ig_post_unit(u, caption)
+            media_id = ig_post_reel(u, caption) if use_reel else ig_post_unit(u, caption)
             u["ig_posted"] = True
             u["ig_posted_at"] = datetime.datetime.utcnow().isoformat() + "Z"
             u["ig_post_id"] = media_id
