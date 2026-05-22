@@ -24,6 +24,7 @@ jobs:
       - name: Render all reels
         run: python make_reels.py --all
       - name: Commit rendered reels
+        if: always()
         run: |
           git config user.name "Southern Iron Bot"
           git config user.email "actions@users.noreply.github.com"

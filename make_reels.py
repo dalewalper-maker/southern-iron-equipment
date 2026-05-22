@@ -8,7 +8,8 @@ photos (whole machine in frame, zero shake). Dark charcoal + gold, Lift Boss
 JCB Lethbridge branded. Closes on the Lift Boss endcard + Dale's contact.
 """
 import os, sys, json, subprocess, tempfile, shutil, time
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True  # render even slightly-truncated JPGs
 
 W, H = 1080, 1920
 FPS = 30
@@ -211,7 +212,10 @@ def main():
                     skipped += 1; continue
             if time.time() - t0 > budget:
                 print(f"make_reels: budget hit — built {built}, {skipped} cached"); print("MORE"); return
-            if build_reel(u["slug"], by_slug): built += 1
+            try:
+                if build_reel(u["slug"], by_slug): built += 1
+            except Exception as e:
+                print(f"make_reels: FAILED {u['slug']}: {e}")
         print(f"make_reels: done — built {built}, {skipped} current"); print("DONE")
     else:
         build_reel(sys.argv[1], by_slug, fast="--fast" in sys.argv)
