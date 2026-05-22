@@ -244,4 +244,22 @@ def main():
             log(f"  ❌ IG FAIL: {e}")
             log(f"  Traceback: {traceback.format_exc()}")
             u.setdefault("ig_fail_count", 0)
-            u["ig_fail_
+            u["ig_fail_count"] += 1
+            u["ig_last_error"] = str(e)[:500]
+            if u["ig_fail_count"] >= 3:
+                u["ig_posted"] = "FAILED"
+    elif not IG_ENABLED:
+        log("[IG] Skipped — IG_ENABLED=0")
+
+    log("Writing queue back...")
+    with open(QUEUE, "w") as f:
+        json.dump(q, f, indent=2)
+    log("=== post_to_meta.py END ===")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        log(f"FATAL in main(): {e}")
+        log(traceback.format_exc())
+        sys.exit(3)
