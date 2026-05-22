@@ -186,16 +186,26 @@ def main():
     log(f"Queue loaded: {len(q['units'])} units")
 
     candidate = None
+    skipped_no_photos = []
     for u in q["units"]:
         fb_done = u.get("fb_posted") in (True, "FAILED")
         ig_done = (not IG_ENABLED) or u.get("ig_posted") in (True, "FAILED")
         if fb_done and ig_done:
             continue
+        # Skip units with no photos. A photoless unit posts a broken text-only
+        # FB post and fails IG outright ("No photos"). Skip it (do NOT mark it
+        # posted) so it becomes eligible automatically once photos are added.
+        if not u.get("photos"):
+            skipped_no_photos.append(u.get("slug"))
+            continue
         candidate = u
         break
 
+    if skipped_no_photos:
+        log(f"Skipped {len(skipped_no_photos)} photoless unit(s): {', '.join(skipped_no_photos)}")
+
     if not candidate:
-        log("Queue: nothing left to post on either channel.")
+        log("Queue: nothing left to post (all remaining units are posted or photoless).")
         return
 
     u = candidate
@@ -234,22 +244,4 @@ def main():
             log(f"  ❌ IG FAIL: {e}")
             log(f"  Traceback: {traceback.format_exc()}")
             u.setdefault("ig_fail_count", 0)
-            u["ig_fail_count"] += 1
-            u["ig_last_error"] = str(e)[:500]
-            if u["ig_fail_count"] >= 3:
-                u["ig_posted"] = "FAILED"
-    elif not IG_ENABLED:
-        log("[IG] Skipped — IG_ENABLED=0")
-
-    log("Writing queue back...")
-    with open(QUEUE, "w") as f:
-        json.dump(q, f, indent=2)
-    log("=== post_to_meta.py END ===")
-
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        log(f"FATAL in main(): {e}")
-        log(traceback.format_exc())
-        sys.exit(3)
+            u["ig_fail_
