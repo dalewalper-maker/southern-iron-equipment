@@ -2,6 +2,7 @@
   "name": "southern-iron-equipment",
   "compatibility_date": "2025-05-01",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    "html_handling": "none"
   }
 }
