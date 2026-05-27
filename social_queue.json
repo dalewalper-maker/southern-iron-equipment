@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T15:41:29.642728",
+  "generated_at": "2026-05-27T16:43:48.482084",
   "units": [
     {
       "slug": "jcb-542-70ag-lbjcb507",
@@ -20,16 +20,17 @@
       "fb_post_id": "908888912301091_122145584991132983",
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": true,
+      "ig_posted_at": "2026-05-22T18:59:32.043789Z",
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 5,
       "_priority_reasons": [
         "top-seller",
         "large-jcb"
       ],
-      "_excel_location": "Edmonton",
-      "ig_posted": true,
-      "ig_posted_at": "2026-05-22T18:59:32.043789Z",
-      "ig_post_id": null,
-      "ig_fail_count": 0
+      "_excel_location": "Edmonton"
     },
     {
       "slug": "jcb-3cx15hfca-lbjcb574",
@@ -44,30 +45,36 @@
       "fb_post_id": "908888912301091_122145770727132983",
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": true,
+      "ig_posted_at": "2026-05-22T18:59:32.043789Z",
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 4,
       "_priority_reasons": [
         "best-seller",
         "large-jcb"
       ],
-      "_excel_location": "Edmonton",
-      "ig_posted": true,
-      "ig_posted_at": "2026-05-22T18:59:32.043789Z",
-      "ig_post_id": null,
-      "ig_fail_count": 0
+      "_excel_location": "Edmonton"
     },
     {
-      "slug": "jcb-3ts-8t-lbjcb596",
-      "unit_id": "LBJCB596",
-      "title": "2026 JCB 3TS 8T",
+      "slug": "jcb-3ts-8t-lbjcb559",
+      "unit_id": "LBJCB559",
+      "title": "2025 JCB 3TS 8T",
       "category_label": "Track Loader",
-      "price_display": "$129,995",
-      "fb_message": "NEW LISTING: 2026 JCB 3TS 8T\n\nSnow, gravel, sand, manure \u2014 this 2026 JCB 3TS 8T runs where you need it.\n\n\u2022 Year: 2026\n\u2022 Make/Model: JCB 3TS 8T\n\u2022 Hours: 3\n\u2022 Tracked 84\" Bucket\n\u2022 Unit #: LBJCB596\n\u2022 Price: $129,995   |   Financing: $2,099/mo (72m @ 4.99% OAC)\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
+      "price_display": "$121,500",
+      "fb_message": "NEW LISTING: 2025 JCB 3TS 8T\n\nSnow, gravel, sand, manure \u2014 this 2025 JCB 3TS 8T runs where you need it.\n\n\u2022 Year: 2025\n\u2022 Make/Model: JCB 3TS 8T\n\u2022 Hours: 214\n\u2022 Tracked 84\" Bucket\n\u2022 Unit #: LBJCB559\n\u2022 Price: $121,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
       "photos": [],
       "fb_posted": false,
       "fb_posted_at": null,
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 4,
       "_priority_reasons": [
         "top-seller",
@@ -88,12 +95,41 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 3,
       "_priority_reasons": [
         "best-seller",
         "lethbridge-yard"
       ],
       "_excel_location": "Lethbridge"
+    },
+    {
+      "slug": "jcb-550-140-lbjcb577",
+      "unit_id": "LBJCB577",
+      "title": "JCB 550-140",
+      "category_label": "Telehandler",
+      "price_display": "Contact for pricing",
+      "fb_message": "NEW LISTING: JCB 550-140\n\nBig reach, big capacity, no excuses. JCB 550-140 ready to work.\n\n\u2022 Make/Model: JCB 550-140\n\u2022 Tele Handler\n\u2022 Unit #: LBJCB577\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
+      "photos": [],
+      "fb_posted": false,
+      "fb_posted_at": null,
+      "fb_post_id": null,
+      "fb_fail_count": 0,
+      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
+      "_priority_score": 3,
+      "_priority_reasons": [
+        "top-seller"
+      ],
+      "_excel_location": "Edmonton"
     },
     {
       "slug": "jcb-3ts-8t-lbjcb56",
@@ -108,44 +144,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
-      "_priority_score": 3,
-      "_priority_reasons": [
-        "top-seller"
-      ],
-      "_excel_location": "Edmonton"
-    },
-    {
-      "slug": "jcb-3ts-8t-lbjcb559",
-      "unit_id": "LBJCB559",
-      "title": "2025 JCB 3TS 8T",
-      "category_label": "Track Loader",
-      "price_display": "$121,500",
-      "fb_message": "NEW LISTING: 2025 JCB 3TS 8T\n\nSnow, gravel, sand, manure \u2014 this 2025 JCB 3TS 8T runs where you need it.\n\n\u2022 Year: 2025\n\u2022 Make/Model: JCB 3TS 8T\n\u2022 Hours: 214\n\u2022 Tracked 84\" Bucket\n\u2022 Unit #: LBJCB559\n\u2022 Price: $121,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
-      "photos": [],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
-      "fb_fail_count": 0,
-      "fb_last_error": null,
-      "_priority_score": 3,
-      "_priority_reasons": [
-        "top-seller"
-      ],
-      "_excel_location": "Calgary"
-    },
-    {
-      "slug": "jcb-3ts-8t-lbjcb593",
-      "unit_id": "LBJCB593",
-      "title": "2026 JCB 3TS 8T",
-      "category_label": "Track Loader",
-      "price_display": "$129,995",
-      "fb_message": "NEW LISTING: 2026 JCB 3TS 8T\n\nSnow, gravel, sand, manure \u2014 this 2026 JCB 3TS 8T runs where you need it.\n\n\u2022 Year: 2026\n\u2022 Make/Model: JCB 3TS 8T\n\u2022 Hours: 7\n\u2022 Tracked 84\" Bucket\n\u2022 Unit #: LBJCB593\n\u2022 Price: $129,995   |   Financing: $2,099/mo (72m @ 4.99% OAC)\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
-      "photos": [],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
-      "fb_fail_count": 0,
-      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 3,
       "_priority_reasons": [
         "top-seller"
@@ -170,15 +173,17 @@
       "fb_post_id": "1538948591272864",
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": true,
+      "ig_posted_at": "2026-05-22T20:56:49.076031Z",
+      "ig_post_id": "18071476637672889",
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 3,
       "_priority_reasons": [
         "best-seller",
         "lethbridge-yard"
       ],
-      "_excel_location": "Lethbridge",
-      "ig_posted": true,
-      "ig_posted_at": "2026-05-22T20:56:49.076031Z",
-      "ig_post_id": "18071476637672889"
+      "_excel_location": "Lethbridge"
     },
     {
       "slug": "ausa-c251hx4-lba1350",
@@ -193,6 +198,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -217,6 +227,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -241,6 +256,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -266,6 +286,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -291,6 +316,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -310,6 +340,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -335,6 +370,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "large-jcb"
@@ -346,14 +386,19 @@
       "unit_id": "LBJCB529",
       "title": "2025 JCB TM320",
       "category_label": "Telehandler",
-      "price_display": "$207,053.14",
-      "fb_message": "NEW LISTING: 2025 JCB TM320\n\nBig reach, big capacity, no excuses. 2025 JCB TM320 ready to work.\n\n\u2022 Year: 2025\n\u2022 Make/Model: JCB TM320\n\u2022 Hours: 9\n\u2022 No Bucket Included\n\u2022 Unit #: LBJCB529\n\u2022 Price: $207,053.14   |   Financing: $3,349/mo (72m @ 4.99% OAC)\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
+      "price_display": "$202,500",
+      "fb_message": "NEW LISTING: 2025 JCB TM320\n\nBig reach, big capacity, no excuses. 2025 JCB TM320 ready to work.\n\n\u2022 Year: 2025\n\u2022 Make/Model: JCB TM320\n\u2022 Hours: 9\n\u2022 No Bucket Included\n\u2022 Unit #: LBJCB529\n\u2022 Price: $202,500   |   Financing: $3,349/mo (72m @ 4.99% OAC)\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
       "photos": [],
       "fb_posted": false,
       "fb_posted_at": null,
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "large-jcb"
@@ -379,6 +424,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -398,6 +448,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "large-jcb"
@@ -417,6 +472,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "large-jcb"
@@ -442,35 +502,16 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
       ],
       "_excel_location": "Calgary"
-    },
-    {
-      "slug": "jcb-3cx14-lbjcb569",
-      "unit_id": "LBJCB569",
-      "title": "2011 JCB 3CX14",
-      "category_label": "Backhoe Loader",
-      "price_display": "$47,900",
-      "fb_message": "NEW LISTING: 2011 JCB 3CX14\n\nBuilt for ag, utility, and municipal crews across the territory.\n\n\u2022 Year: 2011\n\u2022 Make/Model: JCB 3CX14\n\u2022 Hours: 10173\n\u2022 Bucket Included\n\u2022 Unit #: LBJCB569\n\u2022 Price: $47,900\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek\n\n@officialjcb @jcbnorthamerica",
-      "photos": [
-        "assets/img/units/jcb-3cx14-lbjcb569/01.jpg",
-        "assets/img/units/jcb-3cx14-lbjcb569/02.jpg",
-        "assets/img/units/jcb-3cx14-lbjcb569/03.jpg",
-        "assets/img/units/jcb-3cx14-lbjcb569/04.jpg"
-      ],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
-      "fb_fail_count": 0,
-      "fb_last_error": null,
-      "_priority_score": 2,
-      "_priority_reasons": [
-        "best-seller"
-      ],
-      "_excel_location": "Edmonton"
     },
     {
       "slug": "jcb-509-23tc-lbjcb585",
@@ -485,6 +526,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "large-jcb"
@@ -504,6 +550,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -529,6 +580,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -553,6 +609,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -576,36 +637,16 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
       ],
       "_excel_location": "Calgary"
-    },
-    {
-      "slug": "tailift-pfg35-ps-lbt1353",
-      "unit_id": "LBT1353",
-      "title": "2022 Tailift PFG35-PS",
-      "category_label": "Forklift",
-      "price_display": "$35,500",
-      "fb_message": "NEW LISTING: 2022 Tailift PFG35-PS\n\nYard-ready in Lethbridge. 2022 Tailift PFG35-PS \u2014 built to keep your day moving.\n\n\u2022 Year: 2022\n\u2022 Make/Model: Tailift PFG35-PS\n\u2022 Hours: 2775\n\u2022 189\" 3 Stage\n\u2022 Unit #: LBT1353\n\u2022 Price: $35,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
-      "photos": [
-        "assets/img/units/tailift-pfg35-ps-lbt1353/01.jpg",
-        "assets/img/units/tailift-pfg35-ps-lbt1353/02.jpg",
-        "assets/img/units/tailift-pfg35-ps-lbt1353/03.jpg",
-        "assets/img/units/tailift-pfg35-ps-lbt1353/04.jpg",
-        "assets/img/units/tailift-pfg35-ps-lbt1353/05.jpg"
-      ],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
-      "fb_fail_count": 0,
-      "fb_last_error": null,
-      "_priority_score": 2,
-      "_priority_reasons": [
-        "best-seller"
-      ],
-      "_excel_location": "Edmonton"
     },
     {
       "slug": "tailift-pfg30-ps-lbt1368",
@@ -626,6 +667,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -648,6 +694,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -671,6 +722,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -690,6 +746,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -715,6 +776,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -734,6 +800,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -757,6 +828,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -780,6 +856,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -799,6 +880,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -823,6 +909,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -835,7 +926,7 @@
       "title": "2024 Tailift PFG36SRT Cab",
       "category_label": "Forklift",
       "price_display": "$65,585",
-      "fb_message": "NEW LISTING: 2024 Tailift PFG36SRT Cab\n\nPallets, pipe, ag inputs \u2014 this 2024 Tailift PFG36SRT Cab handles the daily grind.\n\n\u2022 Year: 2024\n\u2022 Make/Model: Tailift PFG36SRT Cab\n\u2022 Hours: 13\n\u2022 189\" 3 Stage\n\u2022 Unit #: LBT1495\n\u2022 Price: $65,585\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "fb_message": "NEW LISTING: 2024 Tailift PFG36SRT Cab\n\nPallets, pipe, ag inputs \u2014 this 2024 Tailift PFG36SRT Cab handles the daily grind.\n\n\u2022 Year: 2024\n\u2022 Make/Model: Tailift PFG36SRT Cab\n\u2022 Hours: 123\n\u2022 189\" 3 Stage\n\u2022 Unit #: LBT1495\n\u2022 Price: $65,585\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
       "photos": [
         "assets/img/units/tailift-pfg36srt-cab-lbt1495/01.jpg",
         "assets/img/units/tailift-pfg36srt-cab-lbt1495/02.jpg",
@@ -848,11 +939,40 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
       ],
       "_excel_location": "Calgary"
+    },
+    {
+      "slug": "tailift-pfg36srt-cab-lbt1576",
+      "unit_id": "LBT1576",
+      "title": "2026 Tailift PFG36SRT Cab",
+      "category_label": "Forklift",
+      "price_display": "$65,585",
+      "fb_message": "NEW LISTING: 2026 Tailift PFG36SRT Cab\n\nFrom feedlots to building supply, this 2026 Tailift PFG36SRT Cab earns its keep.\n\n\u2022 Year: 2026\n\u2022 Make/Model: Tailift PFG36SRT Cab\n\u2022 Hours: 1\n\u2022 189\" 3 Stage FP\n\u2022 Unit #: LBT1576\n\u2022 Price: $65,585\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "photos": [],
+      "fb_posted": false,
+      "fb_posted_at": null,
+      "fb_post_id": null,
+      "fb_fail_count": 0,
+      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
+      "_priority_score": 2,
+      "_priority_reasons": [
+        "best-seller"
+      ],
+      "_excel_location": "Edmonton"
     },
     {
       "slug": "tailift-pfg25-ps-lbt1508",
@@ -867,6 +987,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -892,6 +1017,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -911,6 +1041,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -936,6 +1071,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -955,6 +1095,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -974,6 +1119,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -993,6 +1143,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -1012,6 +1167,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -1036,6 +1196,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -1055,25 +1220,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
-      "_priority_score": 2,
-      "_priority_reasons": [
-        "best-seller"
-      ],
-      "_excel_location": "Edmonton"
-    },
-    {
-      "slug": "tailift-pfg36-hd-lbt1570",
-      "unit_id": "LBT1570",
-      "title": "2026 Tailift PFG36-HD",
-      "category_label": "Forklift",
-      "price_display": "$54,500",
-      "fb_message": "NEW LISTING: 2026 Tailift PFG36-HD\n\nSolid lift truck at a Southern Alberta price.\n\n\u2022 Year: 2026\n\u2022 Make/Model: Tailift PFG36-HD\n\u2022 Hours: 3\n\u2022 189\" 3 Stage FP\n\u2022 Unit #: LBT1570\n\u2022 Price: $54,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
-      "photos": [],
-      "fb_posted": false,
-      "fb_posted_at": null,
-      "fb_post_id": null,
-      "fb_fail_count": 0,
-      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -1093,6 +1244,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 2,
       "_priority_reasons": [
         "best-seller"
@@ -1112,6 +1268,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 1,
       "_priority_reasons": [
         "lethbridge-yard"
@@ -1137,6 +1298,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 1,
       "_priority_reasons": [
         "lethbridge-yard"
@@ -1162,6 +1328,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 1,
       "_priority_reasons": [
         "lethbridge-yard"
@@ -1187,6 +1358,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 1,
       "_priority_reasons": [
         "lethbridge-yard"
@@ -1212,6 +1388,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1229,6 +1410,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1251,6 +1437,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1273,6 +1464,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1290,6 +1486,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1312,6 +1513,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1329,6 +1535,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1351,6 +1562,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1368,6 +1584,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1391,6 +1612,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1414,6 +1640,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1437,6 +1668,33 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
+      "_priority_score": 0,
+      "_priority_reasons": [],
+      "_excel_location": "Edmonton"
+    },
+    {
+      "slug": "linde-er18-ac-lbu1567",
+      "unit_id": "LBU1567",
+      "title": "2008 Linde ER18-AC",
+      "category_label": "Forklift",
+      "price_display": "Contact for pricing",
+      "fb_message": "NEW LISTING: 2008 Linde ER18-AC\n\nSolid lift truck at a Southern Alberta price.\n\n\u2022 Year: 2008\n\u2022 Make/Model: Linde ER18-AC\n\u2022 Unit #: LBU1567\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "photos": [],
+      "fb_posted": false,
+      "fb_posted_at": null,
+      "fb_post_id": null,
+      "fb_fail_count": 0,
+      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1454,6 +1712,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1477,6 +1740,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1494,9 +1762,36 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
+    },
+    {
+      "slug": "nissan-mct1b2l25s-lbu1566",
+      "unit_id": "LBU1566",
+      "title": "2013 Nissan MCT1B2L25S",
+      "category_label": "Forklift",
+      "price_display": "$18,900",
+      "fb_message": "NEW LISTING: 2013 Nissan MCT1B2L25S\n\nYard-ready in Lethbridge. 2013 Nissan MCT1B2L25S \u2014 built to keep your day moving.\n\n\u2022 Year: 2013\n\u2022 Make/Model: Nissan MCT1B2L25S\n\u2022 Hours: 1735\n\u2022 189\" 3 Stage\n\u2022 Unit #: LBU1566\n\u2022 Price: $18,900\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "photos": [],
+      "fb_posted": false,
+      "fb_posted_at": null,
+      "fb_post_id": null,
+      "fb_fail_count": 0,
+      "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
+      "_priority_score": 0,
+      "_priority_reasons": [],
+      "_excel_location": "Edmonton"
     },
     {
       "slug": "starke-eco-fd80-lbst1407",
@@ -1517,6 +1812,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1540,6 +1840,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1563,6 +1868,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1580,6 +1890,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1603,6 +1918,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1626,6 +1946,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1649,6 +1974,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1668,6 +1998,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1691,6 +2026,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1714,6 +2054,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1737,6 +2082,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1747,13 +2097,18 @@
       "title": "2020 Deere 333G",
       "category_label": "Track Loader",
       "price_display": "$94,500",
-      "fb_message": "NEW LISTING: 2020 Deere 333G\n\nSpring mud, frozen winters \u2014 tracks handle what southern AB throws at them.\n\n\u2022 Year: 2020\n\u2022 Make/Model: Deere 333G\n\u2022 Hours: 1076\n\u2022 Tracked with78\" Bucket\n\u2022 Unit #: LBU1499\n\u2022 Price: $94,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "fb_message": "NEW LISTING: 2020 Deere 333G\n\nSpring mud, frozen winters \u2014 tracks handle what southern AB throws at them.\n\n\u2022 Year: 2020\n\u2022 Make/Model: Deere 333G\n\u2022 Hours: 1078\n\u2022 Tracked with78\" Bucket\n\u2022 Unit #: LBU1499\n\u2022 Price: $94,500\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
       "photos": [],
       "fb_posted": false,
       "fb_posted_at": null,
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1776,6 +2131,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1799,6 +2159,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1808,14 +2173,19 @@
       "unit_id": "LBU1569",
       "title": "2002 Daewoo G25P-3",
       "category_label": "Forklift",
-      "price_display": "Contact for pricing",
-      "fb_message": "NEW LISTING: 2002 Daewoo G25P-3\n\nPallets, pipe, ag inputs \u2014 this 2002 Daewoo G25P-3 handles the daily grind.\n\n\u2022 Year: 2002\n\u2022 Make/Model: Daewoo G25P-3\n\u2022 Hours: 547\n\u2022 Unit #: LBU1569\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
+      "price_display": "$18,900",
+      "fb_message": "NEW LISTING: 2002 Daewoo G25P-3\n\nPallets, pipe, ag inputs \u2014 this 2002 Daewoo G25P-3 handles the daily grind.\n\n\u2022 Year: 2002\n\u2022 Make/Model: Daewoo G25P-3\n\u2022 Hours: 547\n\u2022 189\" 3 Stage\n\u2022 Unit #: LBU1569\n\u2022 Price: $18,900\n\n\ud83d\udcde Call/text Dale at 780-901-1573\n\ud83d\udce7 dalew@liftboss.ca\n\ud83d\udccd 1065 - 36 Street North, Lethbridge, AB\n\nServing Lethbridge, Medicine Hat, Taber, Cranbrook, Fernie & the Kootenays. Delivery and financing available.\n\n#heavyequipment #constructionequipment #materialhandling #equipmentforsale #usedequipment #dealer #machinery #construction #agriculture #lethbridge #yql #southernalberta #medicinehat #cranbrook #crowsnestpass #taber #fernie #pinchercreek",
       "photos": [],
       "fb_posted": false,
       "fb_posted_at": null,
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Calgary"
@@ -1833,6 +2203,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
@@ -1856,6 +2231,11 @@
       "fb_post_id": null,
       "fb_fail_count": 0,
       "fb_last_error": null,
+      "ig_posted": false,
+      "ig_posted_at": null,
+      "ig_post_id": null,
+      "ig_fail_count": 0,
+      "ig_last_error": null,
       "_priority_score": 0,
       "_priority_reasons": [],
       "_excel_location": "Edmonton"
