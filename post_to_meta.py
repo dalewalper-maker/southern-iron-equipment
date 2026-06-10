@@ -261,4 +261,7 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    
+    except Exception as e:
+        log(f"FATAL in main(): {e}")
+        log(traceback.format_exc())
+        sys.exit(3)
