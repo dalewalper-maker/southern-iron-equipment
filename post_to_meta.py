@@ -235,7 +235,9 @@ def main():
     if IG_ENABLED and (not u.get("ig_posted") or u.get("ig_posted") == "FAILED"):
         try:
             caption = u["fb_message"][:2200]
-            media_id = ig_post_reel(u, caption) if use_reel else ig_post_unit(u, caption)
+            # IG reels disabled per user request (2026-06-10): Instagram posts
+            # photo carousels only — never video reels. FB reels unaffected.
+            media_id = ig_post_unit(u, caption)
             u["ig_posted"] = True
             u["ig_posted_at"] = datetime.datetime.utcnow().isoformat() + "Z"
             u["ig_post_id"] = media_id
@@ -259,7 +261,4 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except Exception as e:
-        log(f"FATAL in main(): {e}")
-        log(traceback.format_exc())
-        sys.exit(3)
+    
