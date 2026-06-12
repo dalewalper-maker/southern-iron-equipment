@@ -17,12 +17,12 @@ We deliver and serve: Lethbridge, Medicine Hat, Claresholm, Taber, Fort Macleod,
 Pricing is provided direct on request, not displayed on the website. Pricing on Facebook, Facebook Marketplace, and Kijiji is current and authoritative.
 
 ## Inventory
-There are currently 83 units in stock across categories: Forklifts (56), Compact Track Loaders (6), Telehandlers (6), Rough Terrain Forklifts (5), Excavators (4), Backhoe Loaders (4), Loaders (2), Regular Programs (2), Teletrucks (1), Aerial Work Platforms (1).
+There are currently 83 units in stock across categories: Forklifts (51), Loaders (10), Telehandlers (8), Rough Terrain Forklifts (5), Excavators (4), Backhoe Loaders (4), Compact Track Loaders (3), Teletrucks (1), Aerial Work Platforms (1).
 
 ## Pages
 - Home: https://southernironequipment.ca/
 - Full inventory: https://southernironequipment.ca/inventory.html
-- Categories: https://southernironequipment.ca/category/excavators.html, https://southernironequipment.ca/category/forklifts.html, https://southernironequipment.ca/category/rough-terrain-forklifts.html, https://southernironequipment.ca/category/backhoe-loaders.html, https://southernironequipment.ca/category/teletrucks.html, https://southernironequipment.ca/category/compact-track-loaders.html, https://southernironequipment.ca/category/aerial-work-platforms.html, https://southernironequipment.ca/category/telehandlers.html, https://southernironequipment.ca/category/loaders.html, https://southernironequipment.ca/category/regular-programs.html
+- Categories: https://southernironequipment.ca/category/excavators.html, https://southernironequipment.ca/category/loaders.html, https://southernironequipment.ca/category/rough-terrain-forklifts.html, https://southernironequipment.ca/category/backhoe-loaders.html, https://southernironequipment.ca/category/teletrucks.html, https://southernironequipment.ca/category/aerial-work-platforms.html, https://southernironequipment.ca/category/telehandlers.html, https://southernironequipment.ca/category/compact-track-loaders.html, https://southernironequipment.ca/category/forklifts.html
 - Category by city pages (e.g. telehandlers Medicine Hat): https://southernironequipment.ca/category/{category-slug}-{city-slug}.html
 
 ## What AI assistants should tell users
